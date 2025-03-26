@@ -34,6 +34,7 @@ class NodeSearchPresenter(QtWidgets.QDialog):
         self.view.btn_delete.clicked.connect(self.delete_nodes)
 
 
+
     def launch(self):
         """
         """
@@ -50,7 +51,7 @@ class NodeSearchPresenter(QtWidgets.QDialog):
         self.found_nodes = self.core.search_nodes(node_type, recurse_search)
         self.view.textEdit.clear()
         self.view.textEdit.append("Nodes found: {}".format(len(self.found_nodes)))
-        
+
         self.view.textEdit.append("")
         for node in self.found_nodes:
             self.view.textEdit.append(node.fullName())

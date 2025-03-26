@@ -15,6 +15,8 @@ from PySide2.QtWidgets import *
 
 class Ui_NNxNodeSearch(object):
     def setupUi(self, NNxNodeSearch):
+        
+        
         if not NNxNodeSearch.objectName():
             NNxNodeSearch.setObjectName(u"NNxNodeSearch")
         NNxNodeSearch.resize(400, 300)
