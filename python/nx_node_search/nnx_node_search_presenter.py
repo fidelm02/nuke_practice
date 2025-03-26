@@ -8,12 +8,10 @@
 
 
 # standard library
-import os
-import sys
 
 # third-party modules
 import nuke
-from PySide2 import QtCore, QtGui, QtWidgets
+from PySide2 import QtWidgets
 
 # Nneex modules
 from nx_node_search.nnex_node_search_view import Ui_NNxNodeSearch
@@ -32,8 +30,8 @@ class NodeSearchPresenter(QtWidgets.QDialog):
         """
         Connect actions
         """
-        self.view.ui.btn_search.clicked.connect(self.search_nodes)
-        self.view.ui.btn_delete.clicked.connect(self.delete_nodes)
+        self.view.btn_search.clicked.connect(self.search_nodes)
+        self.view.btn_delete.clicked.connect(self.delete_nodes)
 
 
     def launch(self):
@@ -46,14 +44,16 @@ class NodeSearchPresenter(QtWidgets.QDialog):
         """
         Search nodes in the script
         """
-        recurse_search = self.view.ui.chk_recursive.isChecked()
-        node_type = self.view.ui.cmb_type.currentText()
+        recurse_search = self.view.chk_recursive.isChecked()
+        node_type = self.view.cmb_type.currentText()
+
         self.found_nodes = self.core.search_nodes(node_type, recurse_search)
-        self.view.ui.textEdit.clear()
-        self.view.ui.textEdit.append("Nodes found: {}".format(len(self.found_nodes)))
-        self.view.ui.textEdit.append("")
+        self.view.textEdit.clear()
+        self.view.textEdit.append("Nodes found: {}".format(len(self.found_nodes)))
+        
+        self.view.textEdit.append("")
         for node in self.found_nodes:
-            self.view.ui.textEdit.append(node.fullName())
+            self.view.textEdit.append(node.fullName())
         
 
     def delete_nodes(self):

@@ -16,6 +16,10 @@ import nuke
 
 # Adding python folder to nuke plugin paths
 NUKE_PRACTICE_PATH = os.path.dirname(__file__)
+
+# p = "D:\Fidel\Documents\Trabajo\Nneex\nuke_practice\python"
+# nuke.pluginAddPath(p)
+
 nuke.pluginAddPath(os.path.join(NUKE_PRACTICE_PATH, "resources"))
 nuke.pluginAddPath(os.path.join(NUKE_PRACTICE_PATH, "python"))
 

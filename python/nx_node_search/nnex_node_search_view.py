@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 ################################################################################
-## Form generated from reading UI file 'types_browserIPpzuj.ui'
+## Form generated from reading UI file 'types_browserCcCcoD.ui'
 ##
 ## Created by: Qt User Interface Compiler version 5.15.2
 ##
@@ -56,6 +56,7 @@ class Ui_NNxNodeSearch(object):
 
         self.textEdit = QTextEdit(self.frame_3)
         self.textEdit.setObjectName(u"textEdit")
+        self.textEdit.setReadOnly(True)
 
         self.verticalLayout_2.addWidget(self.textEdit)
 
