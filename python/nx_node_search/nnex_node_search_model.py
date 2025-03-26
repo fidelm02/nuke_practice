@@ -13,7 +13,7 @@
 import nuke
 
 class NodeSearchModel:
-    def search_nodes(self, type_node: str, recurse_node:bool) -> list:
+    def search_nodes(self, type_node, recurse_node):
         """
         Search nodes in the script
 

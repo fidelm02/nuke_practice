@@ -16,8 +16,8 @@ import nuke
 from PySide2 import QtCore, QtGui, QtWidgets
 
 # Nneex modules
-from nx_node_search.nx_node_search_view import Ui_NNxNodeSearch
-from nx_node_search.nx_node_search_model import NodeSearchModel
+from nx_node_search.nnex_node_search_view import Ui_NNxNodeSearch
+from nx_node_search.nnex_node_search_model import NodeSearchModel
 
 class NodeSearchPresenter(QtWidgets.QDialog):
     def __init__(self):
